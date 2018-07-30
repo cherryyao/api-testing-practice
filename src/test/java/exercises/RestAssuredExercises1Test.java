@@ -1,6 +1,7 @@
 package exercises;
 
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -33,7 +34,13 @@ public class RestAssuredExercises1Test {
         given().
                 spec(requestSpec).
                 when().
-                then();
+                //get("/2016/drivers.json").
+                request("GET", "/2016/drivers.json").
+                then().
+                assertThat().
+                statusCode(200);
+
+        ;
     }
 
     /*******************************************************
@@ -47,7 +54,11 @@ public class RestAssuredExercises1Test {
         given().
                 spec(requestSpec).
                 when().
-                then();
+                request("GET", "/incorrect.json").
+                then().
+                assertThat().
+                statusCode(404);
+        ;
     }
 
     /*******************************************************
@@ -61,7 +72,11 @@ public class RestAssuredExercises1Test {
         given().
                 spec(requestSpec).
                 when().
-                then();
+                get("/2016/drivers.json").
+                then().
+                assertThat().
+                contentType(ContentType.JSON);
+        ;
     }
 
     /***********************************************
