@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.not;
 
 
 public class RestAssuredExercises1Test {
@@ -132,7 +133,9 @@ public class RestAssuredExercises1Test {
         given().
                 spec(requestSpec).
                 when().
-
-                then();
+                get("/2014/circuits.json").
+                then().log().all().
+                assertThat().
+                body("MRData.CircuitTable.Circuits.circuitId",not("nurburgring"));
     }
 }
