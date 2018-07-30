@@ -79,7 +79,11 @@ public class RestAssuredExercises2Test {
 		given().
 			spec(requestSpec).
 		when().
-		then();
+				get("/circuits/monza.json").
+		then().
+				assertThat().
+				body("MRData.CircuitTable.Circuits.Location.country", hasItem("Italy"));
+		;
 	}
 	
 	/*******************************************************
@@ -95,6 +99,10 @@ public class RestAssuredExercises2Test {
 		given().
 			spec(requestSpec).
 		when().
-		then();
+				get("/2015/1/drivers/max_verstappen/pitstops.json").
+		then().log().all().
+		body("MRData.RaceTable.Races.PitStops[0].stop",hasItem("1"));
+
+
 	}
 }
