@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
 
 public class RestAssuredExercises3Test {
 
@@ -88,7 +89,12 @@ public class RestAssuredExercises3Test {
         given().
                 spec(requestSpec).
                 when().
-                then();
+                get("/2014/1/circuits.json").
+                then().
+                spec(responseSpec).
+                body("MRData.CircuitTable.Circuits.Location.locality",hasItem("Melbourne"));
+
+        ;
     }
 
     /*******************************************************
