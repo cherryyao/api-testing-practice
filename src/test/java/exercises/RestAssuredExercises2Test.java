@@ -4,8 +4,15 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
 
 
 public class RestAssuredExercises2Test {
@@ -29,7 +36,27 @@ public class RestAssuredExercises2Test {
 	 * is in Italy, for example) 
 	 ******************************************************/
 
+	static Stream<Arguments> locatityDataProvider() {
+		return Stream.of(
+				Arguments.of("monza", "Italy"),
+				Arguments.of("spa","Belgium")
+
+		);
+	}
 	//todo
+	@ParameterizedTest
+	@MethodSource("locatityDataProvider")
+	public void  checkLocatityInWhichCountry(String locatity,String country){
+
+		        given().spec(requestSpec).
+				pathParam("locatity", locatity).
+				when().
+				get("/circuits/{locatity}.json").
+				then().
+				assertThat().
+				body("MRData.CircuitTable.Circuits.Location.country", hasItem(country));
+
+	}
 
 	/*******************************************************
 	 * Use junit-jupiter-params for @ParameterizedTest that specifies for all races
