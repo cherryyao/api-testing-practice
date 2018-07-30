@@ -38,11 +38,11 @@ public class RestAssuredExercises6Test {
 
 	@Test
 	public void checkThatPostingA2012FordFocusReturnsHttp200() {
-        Car newCar = new Car("Ford Focus","Giulia",2012);
+        Car newCar = new Car("Ford","Focus",2012);
 		given().spec(requestSpec).
 				body(newCar).
 		when().
-				post("/cars/postcar").
+				post("/car/postcar").
 		then().
 				assertThat().
 				statusCode(200);
@@ -56,9 +56,9 @@ public class RestAssuredExercises6Test {
 	 * as provided by JUnit for the assertion
 	 ******************************************************/
 
+
 	@Test
 	public void checkThatRetrievingAnAlfaRomeoGiuliaShowsModelYear2016() {
-
 //		given().
 //				spec(requestSpec).
 //				when();
@@ -68,9 +68,12 @@ public class RestAssuredExercises6Test {
 
 				given().spec(requestSpec).
 						when().
-						get("/cars/getcar/alfaromeogiulia").
+						get("/car/getcar/alfaromeogiulia").
 						as(Car.class);
 
-		assertThat(myCar.getModel(),is(2016));
+		assertThat(myCar.getYear(),is(2016));
 	}
+
+
+
 }
