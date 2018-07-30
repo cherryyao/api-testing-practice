@@ -64,8 +64,29 @@ public class RestAssuredExercises2Test {
 	 * pit stops Max Verstappen made
 	 * (race 1 = 1 pitstop, 2 = 3, 3 = 2, 4 = 2)
 	 ******************************************************/
+	static Stream<Arguments> stopsDataProvider() {
+		return Stream.of(
+				Arguments.of("1", "1"),
+				Arguments.of("2","3"),
+				Arguments.of("3","2"),
+				Arguments.of("4","2")
 
+		);
+	}
 	//todo
+	@ParameterizedTest
+	@MethodSource("stopsDataProvider")
+	public void  getHowManyPitStopsMaxVerstappenMade(String race,String stops){
+
+		given().spec(requestSpec).
+				pathParam("race", race).
+				when().
+				get("/2015/{race}/drivers/max_verstappen/pitstops.json").
+				then().
+				assertThat().
+				body("MRData.RaceTable.Races.PitStops[0].stop", hasItem(stops));
+
+	}
 
 	/*******************************************************
 	 * Request data for a specific circuit (for Monza this 

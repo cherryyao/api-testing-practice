@@ -57,8 +57,8 @@
       <file leaf-file-name="RestAssuredExercises2Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="103" column="62" selection-start-line="103" selection-start-column="62" selection-end-line="103" selection-end-column="62" />
+            <state relative-caret-position="125">
+              <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -66,8 +66,8 @@
       <file leaf-file-name="MaxPitstopsRace1.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/mappings/MaxPitstopsRace1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="41" column="23" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="23" />
+            <state relative-caret-position="75">
+              <caret line="3" column="63" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -591,7 +591,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RestAssuredExercises2Test.checkNumberOfPitstopsForMaxVerstappenIn2015">
+  <component name="RunManager" selected="JUnit.RestAssuredExercises2Test.getHowManyPitStopsMaxVerstappenMade">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -609,29 +609,6 @@
       <option name="MAIN_CLASS_NAME" value="exercises.RestAssuredExercises1Test" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="RestAssuredExercises1Test.checkThereWasNoRaceAtNurburgringIn2014" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-testing-practice_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="exercises" />
-      <option name="MAIN_CLASS_NAME" value="exercises.RestAssuredExercises1Test" />
-      <option name="METHOD_NAME" value="checkThereWasNoRaceAtNurburgringIn2014" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -710,6 +687,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="RestAssuredExercises2Test.getHowManyPitStopsMaxVerstappenMade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-testing-practice_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="exercises" />
+      <option name="MAIN_CLASS_NAME" value="exercises.RestAssuredExercises2Test" />
+      <option name="METHOD_NAME" value="getHowManyPitStopsMaxVerstappenMade(java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -749,19 +749,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.RestAssuredExercises1Test.checkThereWasNoRaceAtNurburgringIn2014" />
       <item itemvalue="JUnit.RestAssuredExercises1Test" />
       <item itemvalue="JUnit.RestAssuredExercises2Test.checkInWhichCountry" />
       <item itemvalue="JUnit.RestAssuredExercises2Test.checkCountryForCircuit" />
       <item itemvalue="JUnit.RestAssuredExercises2Test.checkNumberOfPitstopsForMaxVerstappenIn2015" />
+      <item itemvalue="JUnit.RestAssuredExercises2Test.getHowManyPitStopsMaxVerstappenMade" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RestAssuredExercises2Test.getHowManyPitStopsMaxVerstappenMade" />
         <item itemvalue="JUnit.RestAssuredExercises2Test.checkNumberOfPitstopsForMaxVerstappenIn2015" />
         <item itemvalue="JUnit.RestAssuredExercises2Test.checkCountryForCircuit" />
         <item itemvalue="JUnit.RestAssuredExercises2Test.checkInWhichCountry" />
         <item itemvalue="JUnit.RestAssuredExercises1Test" />
-        <item itemvalue="JUnit.RestAssuredExercises1Test.checkThereWasNoRaceAtNurburgringIn2014" />
       </list>
     </recent_temporary>
   </component>
@@ -779,21 +779,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestAssuredExercises2Test_checkInWhichCountry - 2018.07.30 at 13h 36m 30s.xml">
-      <configuration name="RestAssuredExercises2Test.checkInWhichCountry" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RestAssuredExercises2Test_checkInWhichCountry - 2018.07.30 at 13h 41m 17s.xml">
-      <configuration name="RestAssuredExercises2Test.checkInWhichCountry" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RestAssuredExercises2Test_checkInWhichCountry - 2018.07.30 at 13h 41m 39s.xml">
-      <configuration name="RestAssuredExercises2Test.checkInWhichCountry" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RestAssuredExercises2Test_checkInWhichCountry - 2018.07.30 at 13h 43m 05s.xml">
-      <configuration name="RestAssuredExercises2Test.checkInWhichCountry" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RestAssuredExercises2Test_checkInWhichCountry - 2018.07.30 at 13h 43m 48s.xml">
-      <configuration name="RestAssuredExercises2Test.checkInWhichCountry" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RestAssuredExercises2Test_checkInWhichCountry - 2018.07.30 at 13h 44m 09s.xml">
       <configuration name="RestAssuredExercises2Test.checkInWhichCountry" configurationId="JUnit" />
     </history-entry>
@@ -808,6 +793,21 @@
     </history-entry>
     <history-entry file="RestAssuredExercises2Test_checkNumberOfPitstopsForMaxVerstappenIn2015 - 2018.07.30 at 13h 51m 22s.xml">
       <configuration name="RestAssuredExercises2Test.checkNumberOfPitstopsForMaxVerstappenIn2015" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestAssuredExercises2Test_checkNumberOfPitstopsForMaxVerstappenIn2015 - 2018.07.30 at 13h 54m 24s.xml">
+      <configuration name="RestAssuredExercises2Test.checkNumberOfPitstopsForMaxVerstappenIn2015" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestAssuredExercises2Test_checkNumberOfPitstopsForMaxVerstappenIn2015 - 2018.07.30 at 13h 54m 59s.xml">
+      <configuration name="RestAssuredExercises2Test.checkNumberOfPitstopsForMaxVerstappenIn2015" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestAssuredExercises2Test_getHowManyPitStopsMaxVerstappenMade - 2018.07.30 at 13h 58m 26s.xml">
+      <configuration name="RestAssuredExercises2Test.getHowManyPitStopsMaxVerstappenMade" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestAssuredExercises2Test_getHowManyPitStopsMaxVerstappenMade - 2018.07.30 at 13h 58m 46s.xml">
+      <configuration name="RestAssuredExercises2Test.getHowManyPitStopsMaxVerstappenMade" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RestAssuredExercises2Test_getHowManyPitStopsMaxVerstappenMade - 2018.07.30 at 13h 59m 19s.xml">
+      <configuration name="RestAssuredExercises2Test.getHowManyPitStopsMaxVerstappenMade" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -831,12 +831,12 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32575756" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32575756" />
       <window_info anchor="bottom" id="Version Control" weight="0.32896176" />
       <window_info anchor="bottom" id="Terminal" weight="0.32896176" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20735608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20735608" />
       <window_info anchor="bottom" id="Build" weight="0.2852459" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" />
@@ -934,15 +934,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/mappings/MaxPitstopsRace1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="75">
+          <caret line="3" column="63" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="103" column="62" selection-start-line="103" selection-start-column="62" selection-end-line="103" selection-end-column="62" />
+        <state relative-caret-position="125">
+          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
         </state>
       </provider>
     </entry>
