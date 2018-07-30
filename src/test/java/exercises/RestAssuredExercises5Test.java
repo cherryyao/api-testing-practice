@@ -37,7 +37,7 @@ public class RestAssuredExercises5Test {
 				get("/xml/speedrecords").
 		then().
 				assertThat().
-				body("speedRecords.car[2].year", equalTo("1955"));;
+				body("speedRecords.car[2].year", equalTo("1955"));
 	}
 	
 	/*******************************************************
@@ -49,11 +49,14 @@ public class RestAssuredExercises5Test {
 	
 	@Test
 	public void checkFourthSpeedRecordWasSetbyAnAstonMartin() {
-		
+
 		given().
-			spec(requestSpec).
-		when().
-		then();
+				spec(requestSpec).
+				when().
+				get("/xml/speedrecords").
+				then().
+				assertThat().
+				body("speedRecords.car[3].@make", equalTo("Aston Martin"));
 	}
 	
 	/*******************************************************
