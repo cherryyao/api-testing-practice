@@ -1,12 +1,18 @@
 package exercises;
 
+import dataentities.Address;
+import dataentities.Car;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.CharArrayReader;
+
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 public class RestAssuredExercises6Test {
 
@@ -32,11 +38,14 @@ public class RestAssuredExercises6Test {
 
 	@Test
 	public void checkThatPostingA2012FordFocusReturnsHttp200() {
-
-		given().
-			spec(requestSpec).
+        Car newCar = new Car("Ford Focus","Giulia",2012);
+		given().spec(requestSpec).
+				body(newCar).
 		when().
-		then();
+				post("/cars/postcar").
+		then().
+				assertThat().
+				statusCode(200);
 	}
 
 	/*******************************************************
@@ -50,10 +59,18 @@ public class RestAssuredExercises6Test {
 	@Test
 	public void checkThatRetrievingAnAlfaRomeoGiuliaShowsModelYear2016() {
 
-		given().
-			spec(requestSpec).
-		when();
+//		given().
+//				spec(requestSpec).
+//				when();
 
 		// Put your assert here
+		Car myCar =
+
+				given().spec(requestSpec).
+						when().
+						get("/cars/getcar/alfaromeogiulia").
+						as(Car.class);
+
+		assertThat(myCar.getModel(),is(2016));
 	}
 }
